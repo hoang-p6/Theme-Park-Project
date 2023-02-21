@@ -21,7 +21,7 @@ const AddRide = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.post(`${BASE_URL}`, formState)
+    await axios.post(`${BASE_URL}/createRide`, formState)
     setFormState(initialState)
   }
 
