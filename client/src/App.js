@@ -8,8 +8,9 @@ const App = () => {
     <div>
       <Nav />
       <main>
-
-        <Routes></Routes>
+        <Routes>
+            <Route path="/" element={<Home />} />
+        </Routes>
       </main>
     </div>
   )
