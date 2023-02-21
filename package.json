@@ -4,12 +4,26 @@
   "description": "## Date: 02/21/2023",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mongoose": "^6.9.2"
+    "express": "^4.18.2",
+    "mongoose": "^6.9.2",
+    "morgan": "^1.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoang-p6/Theme-Park-Project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hoang-p6/Theme-Park-Project/issues"
+  },
+  "homepage": "https://github.com/hoang-p6/Theme-Park-Project#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
