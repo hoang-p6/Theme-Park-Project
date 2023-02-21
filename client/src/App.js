@@ -8,6 +8,7 @@ const App = () => {
     <div>
       <Nav />
       <main>
+
         <Routes></Routes>
       </main>
     </div>

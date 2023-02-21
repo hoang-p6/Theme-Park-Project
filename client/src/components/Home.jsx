@@ -1,4 +1,5 @@
 import RideList from './RideList'
+
 const Home = () => {
   return (
     <div>
