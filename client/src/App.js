@@ -9,7 +9,6 @@ const App = () => {
       <Nav />
       <main>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
         </Routes>
       </main>
     </div>
