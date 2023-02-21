@@ -1,8 +1,16 @@
-import logo from './logo.svg'
 import './App.css'
+import Nav from './components/Nav'
+import { Routes, Route } from 'react-router-dom'
 
-function App() {
-  return <div className="App"></div>
+const App = () => {
+  return (
+    <div>
+      <Nav />
+      <main>
+        <Routes></Routes>
+      </main>
+    </div>
+  )
 }
 
 export default App
