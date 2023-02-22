@@ -1,35 +1,39 @@
 import { useState } from 'react'
+import axios from 'axios'
 
 const Reviews = () => {
-  const [formState, setFormState] = useState(initialState)
   const initialState = {
     name: '',
     rating: '',
     comments: ''
   }
+  const [formState, setFormState] = useState(initialState)
   const handleSubmit = async (event) => {
     event.preventDefault()
-    await axios.post('http://localhost:3001/', formState)
+    await axios.post('http://localhost:3001/api/createReview', formState)
     setFormState(initialState)
+  }
+  const handleChange = (e) => {
+    setFormState({ ...formState, [e.target.id]: e.target.value })
   }
   return (
     <div>
       <form onSubmit={handleSubmit} className="reviews">
         <h1>Reviews</h1>
-        <label htmlFor="name">Name:</label>
+        <label htmlFor="reviewName">Name:</label>
         <input
-          id="name"
+          id="reviewName"
           type="text"
           onChange={handleChange}
-          value={formState.name}
+          value={formState.reviewName}
         ></input>
 
         <label htmlFor="rating">Rating:</label>
         <input
-          id="email"
+          id="rating"
           type="text"
           onChange={handleChange}
-          value={formState.email}
+          value={formState.rating}
         ></input>
 
         <label htmlFor="comments">comments:</label>
