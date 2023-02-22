@@ -8,6 +8,7 @@ const BASE_URL = `http://localhost:3001/api`
 
 const Home = () => {
   const [rides, setRides] = useState([])
+  const [reviews, setReviews] = useState([])
 
   const { id } = useParams()
 
@@ -16,10 +17,14 @@ const Home = () => {
   const getRides = async () => {
     const response = await axios.get(`${BASE_URL}/getAllRides`)
     setRides(response.data.rides)
-
+  }
+  const getReviews = async () => {
+    const response = await axios.get(
+      'http://localhost:3001/api/getReview/63f5998c1e6c6e8a5670cd64'
+    )
+    setReviews(response.data.reviews)
   }
   useEffect(() => {
-
     getRides()
   }, [])
 
@@ -34,9 +39,7 @@ const Home = () => {
 
   // console.log("Hello", handleDelete())
   return (
-
     <div className="rides">
-      <h1>Rides</h1>
       {rides.map((ride) => (
         <div key={ride._id}>
           <RideList
@@ -45,19 +48,15 @@ const Home = () => {
             location={ride.location}
             id={ride._id}
             getRides={getRides}
+            getReviews={getReviews}
           />
 
-        <button onClick={() => handleDelete(ride._id)}>Delete</button>
+          <button onClick={() => handleDelete(ride._id)}>Delete</button>
         </div>
       ))}
       <button onClick={addRide}>Add Ride</button>
 
-      {addingRide && (
-        <AddRide getRides={getRides} />
-
-      )}
-
-
+      {addingRide && <AddRide getRides={getRides} />}
     </div>
   )
 }
