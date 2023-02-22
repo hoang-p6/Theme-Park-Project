@@ -1,16 +1,20 @@
 import { useState } from 'react'
+import axios from 'axios'
 
 const Reviews = () => {
-  const [formState, setFormState] = useState(initialState)
   const initialState = {
     name: '',
     rating: '',
     comments: ''
   }
+  const [formState, setFormState] = useState(initialState)
   const handleSubmit = async (event) => {
     event.preventDefault()
-    await axios.post('http://localhost:3001/', formState)
+    await axios.post('http://localhost:3001/createReview', formState)
     setFormState(initialState)
+  }
+  const handleChange = (e) => {
+    setFormState({ ...formState, [e.target.id]: e.target.value })
   }
   return (
     <div>

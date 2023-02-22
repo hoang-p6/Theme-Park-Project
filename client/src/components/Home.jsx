@@ -2,11 +2,15 @@ import axios from 'axios'
 import AddRide from './AddRide'
 import RideList from './RideList'
 import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 
 const BASE_URL = `http://localhost:3001/api`
 
 const Home = () => {
   const [rides, setRides] = useState([])
+
+  const { id } = useParams()
+
   const [addingRide, setAddingRide] = useState(false)
   console.log("Hello", rides)
 
@@ -15,9 +19,7 @@ const Home = () => {
     setRides(response.data.rides)
 
   }
-
   useEffect(() => {
-
 
     getRides()
   }, [])
@@ -33,6 +35,7 @@ const Home = () => {
 
   // console.log("Hello", handleDelete())
   return (
+
     <div className="rides">
       <h1>Rides</h1>
       {rides.map((ride) => (
@@ -44,6 +47,7 @@ const Home = () => {
             id={ride._id}
             getRides={getRides}
           />
+
         <button onClick={() => handleDelete(ride._id)}>Delete</button>
         </div>
       ))}
@@ -53,6 +57,7 @@ const Home = () => {
         <AddRide getRides={getRides} />
 
       )}
+
 
     </div>
   )
