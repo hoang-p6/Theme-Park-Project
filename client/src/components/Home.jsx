@@ -8,7 +8,7 @@ const BASE_URL = `http://localhost:3001/api`
 const Home = () => {
   const [rides, setRides] = useState([])
   const [addingRide, setAddingRide] = useState(false)
-
+  
   const getRides = async () => {
     const response = await axios.get(`${BASE_URL}/getAllRides`)
     setRides(response.data.rides)
