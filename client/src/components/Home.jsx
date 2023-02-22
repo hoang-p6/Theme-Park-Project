@@ -37,7 +37,6 @@ const Home = () => {
     getRides()
   }
 
-  // console.log("Hello", handleDelete())
   return (
     <div className="rides">
       {rides.map((ride) => (

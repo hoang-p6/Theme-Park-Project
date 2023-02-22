@@ -3,7 +3,7 @@ const Reviews = require('../models/reviews')
 
 const getAllRides = async (req, res) => {
   try {
-    const rides = await Ride.find()
+    const rides = await Ride.find().populate('reviews')
     return res.status(200).json({ rides })
   } catch (error) {
     return res.status(500).send(error.message)
@@ -61,6 +61,9 @@ const createReview = async (req, res) => {
   try {
     const review = await new Reviews(req.body)
     await review.save()
+    const ride = await Ride.findById(req.params.id)
+    ride.reviews.push(review._id)
+    await ride.save()
     return res.status(201).json({
       review
     })
