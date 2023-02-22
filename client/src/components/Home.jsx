@@ -22,6 +22,7 @@ const Home = () => {
     setAddingRide(true)
   }
 
+
   return (
     <div className='rides' key={rides._id}>
       <h1>Rides</h1>
@@ -32,6 +33,7 @@ const Home = () => {
       {addingRide && (
         <AddRide />
       )}
+
     </div>
   )
 }
