@@ -7,10 +7,10 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 const main = async () => {
     const reviews = [
         {
-          reviewName: "Bob",
-          rating: "4",
-          comments: "Ride so good"
-        } 
+            reviewName: "Bob",
+            rating: "4",
+            comments: "Ride so good"
+        }
     ]
 
     await Review.insertMany(reviews)
