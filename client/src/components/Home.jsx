@@ -8,18 +8,18 @@ const BASE_URL = `http://localhost:3001/api`
 
 const Home = () => {
   const [rides, setRides] = useState([])
+
   const { id } = useParams()
+
   const [addingRide, setAddingRide] = useState(false)
+  console.log("Hello", rides)
 
   const getRides = async () => {
     const response = await axios.get(`${BASE_URL}/getAllRides`)
     setRides(response.data.rides)
+
   }
   useEffect(() => {
-    const getRides = async () => {
-      const response = await axios.get(`${BASE_URL}/getAllRides`)
-      setRides(response.data.rides)
-    }
 
     getRides()
   }, [])
@@ -28,10 +28,18 @@ const Home = () => {
     setAddingRide(true)
   }
 
+  const handleDelete = async (id) => {
+    await axios.delete(`${BASE_URL}/deleteRides/${id}`)
+    getRides()
+  }
+
+  // console.log("Hello", handleDelete())
   return (
-    <div>
-      <div className="rides" key={rides._id}>
-        {rides.map((ride) => (
+
+    <div className="rides">
+      <h1>Rides</h1>
+      {rides.map((ride) => (
+        <div key={ride._id}>
           <RideList
             name={ride.name}
             image={ride.image}
@@ -39,12 +47,18 @@ const Home = () => {
             id={ride._id}
             getRides={getRides}
           />
-        ))}
-      </div>
-      <button onClick={addRide} className="addRideButton">
-        Add Ride
-      </button>
-      {addingRide && <AddRide getRides={getRides} />}
+
+        <button onClick={() => handleDelete(ride._id)}>Delete</button>
+        </div>
+      ))}
+      <button onClick={addRide}>Add Ride</button>
+
+      {addingRide && (
+        <AddRide getRides={getRides} />
+
+      )}
+
+
     </div>
   )
 }
