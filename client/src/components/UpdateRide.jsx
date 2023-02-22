@@ -25,7 +25,7 @@ const UpdateRide = ({ rides, getRides }) => {
       image: formState.image,
       location: formState.location
     }
-    await axios.put(`http://localhost:3001/updateRides/${id}`, updatedRide)
+    await axios.put(`http://localhost:3001/api/updateRides/${id}`, updatedRide)
     foundRide[0] = updatedRide
     setFormState('')
     navigate(`/getRide/${id}`)
