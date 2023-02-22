@@ -10,7 +10,7 @@ const Reviews = () => {
   const [formState, setFormState] = useState(initialState)
   const handleSubmit = async (event) => {
     event.preventDefault()
-    await axios.post('http://localhost:3001/createReview', formState)
+    await axios.post('http://localhost:3001/api/createReview', formState)
     setFormState(initialState)
   }
   const handleChange = (e) => {
