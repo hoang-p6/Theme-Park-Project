@@ -40,7 +40,6 @@ const Home = () => {
   // console.log("Hello", handleDelete())
   return (
     <div className="rides">
-      <h1>Rides</h1>
       {rides.map((ride) => (
         <div key={ride._id}>
           <RideList

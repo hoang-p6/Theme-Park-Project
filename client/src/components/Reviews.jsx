@@ -12,7 +12,8 @@ const Reviews = ({ reviews, getReviews }) => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     await axios.post('http://localhost:3001/api/createReview', formState)
-    console.log(formState)
+
+
     setFormState(initialState)
   }
 
