@@ -1,42 +1,42 @@
 import { useState } from 'react'
 import axios from 'axios'
 
-const Reviews = () => {
-  const initialState = {
-    name: '',
-    rating: '',
-    comments: ''
-  }
+const Reviews = ({ reviews, getReviews }) => {
+  const initialState = ''
   const [formState, setFormState] = useState(initialState)
-  const handleSubmit = async (event) => {
-    event.preventDefault()
-    await axios.post('http://localhost:3001/createReview', formState)
-    setFormState(initialState)
-  }
+
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.id]: e.target.value })
   }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    await axios.post('http://localhost:3001/api/createReview', formState)
+    console.log(formState)
+    setFormState(initialState)
+  }
+
   return (
     <div>
       <form onSubmit={handleSubmit} className="reviews">
         <h1>Reviews</h1>
-        <label htmlFor="name">Name:</label>
+        <label htmlFor="reviewName">Name:</label>
         <input
-          id="name"
+          id="reviewName"
           type="text"
           onChange={handleChange}
-          value={formState.name}
+          value={formState.reviewName}
         ></input>
 
         <label htmlFor="rating">Rating:</label>
         <input
-          id="email"
+          id="rating"
           type="text"
           onChange={handleChange}
-          value={formState.email}
+          value={formState.rating}
         ></input>
 
-        <label htmlFor="comments">comments:</label>
+        <label htmlFor="comments">Comments:</label>
         <input
           id="comments"
           type="text"
