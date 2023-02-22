@@ -29,7 +29,7 @@ const Home = () => {
   }, [])
 
   const addRide = () => {
-    setAddingRide(true)
+    setAddingRide((current) => !current)
   }
 
   const handleDelete = async (id) => {

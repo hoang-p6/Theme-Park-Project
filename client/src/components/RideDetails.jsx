@@ -11,6 +11,7 @@ const RideDetails = ({ rides, reviews, getReviews }) => {
 
   useEffect(() => {
     selectRide()
+    console.log(rides)
   })
   return (
     <div>

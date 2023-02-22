@@ -13,7 +13,6 @@ const Reviews = ({ reviews, getReviews }) => {
     event.preventDefault()
     await axios.post('http://localhost:3001/api/createReview', formState)
 
-
     setFormState(initialState)
   }
 
