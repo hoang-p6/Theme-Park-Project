@@ -18,6 +18,7 @@ const RideDetails = ({ rides, reviews, getReviews, getRides }) => {
         <p>{review.reviewName}</p>
         <p>Ride Rating: {review.rating}</p>
         <p>Additional Comments: {review.comments}</p>
+        {console.log(review._id)}
       </div>
     )
   })
