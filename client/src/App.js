@@ -31,7 +31,7 @@ const App = () => {
           />
           <Route
             path="/updateRides/:id"
-            element={<UpdateRide rides={rides} />}
+            element={<UpdateRide rides={rides} getRides={getRides} />}
           />
         </Routes>
       </main>
