@@ -14,7 +14,15 @@ const Home = () => {
     setRides(response.data.rides)
   }
 
+
   useEffect(() => {
+
+    const getRides = async () => {
+      const response = await axios.get(`${BASE_URL}/getAllRides`)
+      setRides(response.data.rides)
+      console.log(response)
+    }
+
     getRides()
   }, [])
 
@@ -27,7 +35,10 @@ const Home = () => {
     <div className='rides' key={rides._id}>
       <h1>Rides</h1>
       {rides.map((ride) => (
-      <RideList name={ride.name} image={ride.image} location={ride.location} />
+        <RideList
+          name={ride.name}
+          image={ride.image}
+          location={ride.location} />
       ))}
       <button onClick={addRide}>Add Ride</button>
       {addingRide && (
