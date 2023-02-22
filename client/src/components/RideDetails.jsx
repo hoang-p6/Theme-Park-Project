@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Reviews from './Reviews'
 
-const RideDetails = ({ rides }) => {
+const RideDetails = ({ rides, reviews, getReviews }) => {
   const { id } = useParams()
   const [thisRide, setThisRide] = useState(rides)
   const selectRide = () => {
@@ -22,7 +22,7 @@ const RideDetails = ({ rides }) => {
           <h1>{thisRide.reviews}</h1>
         </div>
       )}
-      <Reviews />
+      <Reviews reviews={reviews} getReviews={getReviews} />
     </div>
   )
 }

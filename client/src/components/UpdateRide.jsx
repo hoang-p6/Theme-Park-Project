@@ -60,7 +60,7 @@ const UpdateRide = ({ rides, getRides }) => {
               onChange={handleChange}
               value={formState.location}
             ></input>
-            <button type="submit">Save Changes</button>
+            <button type="submit">Save</button>
           </form>
         )}
       </div>
