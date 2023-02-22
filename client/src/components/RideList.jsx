@@ -7,6 +7,9 @@ const RideList = (props) => {
           <h3>{props.name}</h3>
           <img src={props.image} alt="ride"></img>
           <h5>{props.location}</h5>
+          <Link to={`updateRides/${props.id}`}>
+            <button>Edit</button>
+          </Link>
         </div>
       </div>
     </Link>
