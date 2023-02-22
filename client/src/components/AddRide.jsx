@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const BASE_URL = `http://localhost:3001/api`
 
-const AddRide = () => {
+const AddRide = (props) => {
 
   const initialState = {
     name: '',
@@ -12,7 +12,6 @@ const AddRide = () => {
   }
 
   const [formState, setFormState] = useState(initialState)
-
   const [ride, setRide] = useState()
 
   const handleChange = (e) => {
@@ -24,6 +23,7 @@ const AddRide = () => {
     e.preventDefault()
     await axios.post(`${BASE_URL}/createRide`, formState)
     setFormState(initialState)
+    props.getRides()
   }
 
   return(
