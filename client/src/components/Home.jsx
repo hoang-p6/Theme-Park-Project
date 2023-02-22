@@ -12,19 +12,13 @@ const Home = () => {
 
   const [addingRide, setAddingRide] = useState(false)
 
-
   const getRides = async () => {
     const response = await axios.get(`${BASE_URL}/getAllRides`)
     setRides(response.data.rides)
+    console.log(response)
   }
 
   useEffect(() => {
-
-    const getRides = async () => {
-      const response = await axios.get(`${BASE_URL}/getAllRides`)
-      setRides(response.data.rides)
-      console.log(response)
-    }
 
     getRides()
   }, [])
@@ -52,7 +46,8 @@ const Home = () => {
       ))}
       <button onClick={addRide}>Add Ride</button>
       {addingRide && (
-        <AddRide />
+        <AddRide getRides={getRides}/>
+        
       )}
 
     </div>
