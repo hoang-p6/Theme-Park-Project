@@ -15,9 +15,9 @@ const RideDetails = ({ rides, reviews, getReviews, getRides }) => {
   const rideReviews = thisRide?.reviews?.map((review) => {
     return (
       <div>
-        {review.reviewName}
-        {review.rating}
-        {review.comments}
+        <p>{review.reviewName}</p>
+        <p>Ride Rating: {review.rating}</p>
+        <p>Additional Comments: {review.comments}</p>
       </div>
     )
   })
@@ -27,7 +27,8 @@ const RideDetails = ({ rides, reviews, getReviews, getRides }) => {
         <div>
           <h1>{thisRide.name}</h1>
           <img src={thisRide.image} />
-          <h1>{thisRide.location}</h1>
+          <h3>Location: {thisRide.location}</h3>
+          <h2>Ride Reviews</h2>
           {rideReviews}
         </div>
       )}
