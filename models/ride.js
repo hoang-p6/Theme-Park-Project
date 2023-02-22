@@ -5,8 +5,8 @@ const Ride = new Schema(
   {
     name: { type: String, required: true },
     image: { type: String, required: true },
-    location: { type: String, required: true }
-    // reviews: { type: Schema.Types.ObjectId, ref: "Review" }
+    location: { type: String, required: true },
+    reviews: [{ type: Schema.Types.ObjectId, ref: 'Review' }]
   },
   { timestamps: true }
 )

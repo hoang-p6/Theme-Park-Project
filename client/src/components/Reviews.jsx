@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 
-const Reviews = ({ reviews, getReviews }) => {
+const Reviews = ({ reviews, getReviews, id, getRides }) => {
   const initialState = ''
   const [formState, setFormState] = useState(initialState)
 
@@ -11,8 +11,11 @@ const Reviews = ({ reviews, getReviews }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    await axios.post('http://localhost:3001/api/createReview', formState)
-
+    await axios.post(
+      `http://localhost:3001/api/ride/${id}/createReview`,
+      formState
+    )
+    getRides()
     setFormState(initialState)
   }
 

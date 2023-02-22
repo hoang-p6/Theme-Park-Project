@@ -10,7 +10,7 @@ router.put('/updateRides/:id', controllers.updateRide)
 router.delete('/deleteRides/:id', controllers.deleteRide)
 
 router.get('/getAllReviews', controllers.getAllReviews)
-router.post('/createReview', controllers.createReview)
+router.post('/ride/:id/createReview', controllers.createReview)
 router.put('/updateReviews/:id', controllers.updateReview)
 router.delete('/deleteReviews/:id', controllers.deleteReview)
 
