@@ -1,0 +1,28 @@
+.rides {
+  display: grid;
+  row-gap: 25px;
+  grid-template-columns: 33vw 33vw 33vw;
+  text-align: center;
+  /* border: 2px solid black; */
+}
+.ride-info {
+  margin: 10px;
+  border: 2px solid black;
+  padding: 20px;
+  text-decoration: none;
+  height: 60vh;
+}
+.navbar {
+  height: 10vh;
+  background-color: rgb(138, 187, 255);
+}
+button {
+  width: 5vw;
+  height: 5vh;
+}
+img {
+  border-radius: 25px;
+  width: 20vw;
+  height: 30vh;
+  object-fit: cover;
+}
