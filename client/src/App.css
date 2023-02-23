@@ -54,3 +54,33 @@ a {
     -1px -1px 0 #000;
   font-size: 60px;
 }
+
+.reviewImg {
+  width: 90vw;
+  height: 50vh;
+  margin-top: 2vh;
+}
+
+.reviewTitle {
+
+}
+
+.reviewPageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.riderDetailsContainer {
+  
+}
+
+.descriptionContainer {
+
+}
+
+.rideReviewsContainer {
+
+}
