@@ -11,10 +11,3 @@ const Review = new Schema(
 )
 
 module.exports = mongoose.model('Review', Review)
-
-// const Description = new Schema(
-//     {
-//         description: {type: String, required: true },
-//         heightRequirement: { type: String, required: true },
-
-//     }

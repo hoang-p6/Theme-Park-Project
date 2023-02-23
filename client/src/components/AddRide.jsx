@@ -10,6 +10,9 @@ const AddRide = (props) => {
     name: '',
     image: '',
     location: '',
+    description: '',
+    heightRequirement: '',
+    topSpeed: ''
   }
 
   const [formState, setFormState] = useState(initialState)
@@ -50,6 +53,27 @@ const AddRide = (props) => {
       id="location"
       onChange={handleChange}
       value={formState.location}
+      />
+        <label htmlFor="location">Description of the Ride</label>
+      <input
+      type="text"
+      id="description"
+      onChange={handleChange}
+      value={formState.description}
+      />
+        <label htmlFor="location">Height Requirement of the Ride</label>
+      <input
+      type="text"
+      id="heightRequirement"
+      onChange={handleChange}
+      value={formState.heightRequirement}
+      />
+        <label htmlFor="location">Top Speed of the Ride</label>
+      <input
+      type="text"
+      id="topSpeed"
+      onChange={handleChange}
+      value={formState.topSpeed}
       />
       <button className="submit" type='submit'>Submit</button>
     </form>
