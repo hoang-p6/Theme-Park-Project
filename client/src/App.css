@@ -21,6 +21,7 @@
   margin: 0;
   padding: 0;
   top: 0;
+  z-index: 5;
 }
 .navlinks {
   font-family: 'Josefin Sans', sans-serif;
@@ -58,9 +59,9 @@ li a:hover {
 
 .ride-title {
   position: absolute;
-  top: 50%;
+  top: 25%;
   left: 50%;
-  font-size: 30px;
+  font-size: 35px;
   transform: translate(-50%, -50%);
   color: white;
   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
