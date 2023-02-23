@@ -20,23 +20,25 @@ const App = () => {
     getRides()
   }, [])
   return (
-    <div>
-      <Nav />
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/createRide" element={<AddRide />} />
-          <Route
-            path="//getRide/:id"
-            element={<RideDetails getRides={getRides} rides={rides} />}
-          />
-          <Route
-            path="/updateRides/:id"
-            element={<UpdateRide rides={rides} getRides={getRides} />}
-          />
-        </Routes>
-      </main>
+    <div className='websiteContainer'>
+      <div>
+        <Nav />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/createRide" element={<AddRide />} />
+            <Route
+              path="//getRide/:id"
+              element={<RideDetails getRides={getRides} rides={rides} />}
+            />
+            <Route
+              path="/updateRides/:id"
+              element={<UpdateRide rides={rides} getRides={getRides} />}
+            />
+          </Routes>
+        </main>
+      </div>
     </div>
   )
 }
