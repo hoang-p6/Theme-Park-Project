@@ -1,5 +1,5 @@
 const db = require('../db')
-const Ride= require('../models/ride')
+const Ride = require('../models/ride')
 
 // Connect to the database
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
@@ -7,10 +7,10 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 const main = async () => {
     const ride = [
         {
-          name: "goliath",
-          image: "https://imgur.com/Eip2F9b",
-          location: "sixflags",
-        } 
+            name: "goliath",
+            image: "https://imgur.com/Eip2F9b",
+            location: "sixflags",
+        }
     ]
 
     await Ride.insertMany(ride)
