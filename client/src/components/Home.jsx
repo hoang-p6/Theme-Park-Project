@@ -45,11 +45,13 @@ const Home = () => {
             name={ride.name}
             image={ride.image}
             location={ride.location}
+            description={ride.description}
+            heightRequirement={ride.heightRequirement}
+            topSpeed={ride.topSpeed}
             id={ride._id}
             getRides={getRides}
             getReviews={getReviews}
           />
-
           <button onClick={() => handleDelete(ride._id)}>Delete</button>
         </div>
       ))}
