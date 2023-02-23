@@ -1,12 +1,5 @@
-.home {
-  display: grid;
-  grid-template-columns: 30% 30% 30%;
-  text-align: center;
-  margin: 10px 0px 10px 100px;
-}
-
-.home {
-  position: center;
+html {
+  margin: 0;
 }
 
 .navbar {
@@ -17,31 +10,58 @@
   margin: 0;
   padding: 0;
 }
+
 li {
   list-style-type: none;
   float: left;
   padding: 10px;
   font-size:x-large;
+
 }
+
 li a:hover {
   color:#eee021;
   background-color:#2377de;
   border-radius: 30px;
   transition:  all 0.7s ease-in;
 }
-button {
-  width: 5vw;
-  height: 2vh;
+
+.home {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  text-align: center;
+  margin: 0px 0px 10px 100px;
+  /* background-color: green; */
+}
+
+.containerForImageandText {
+  position: relative;
+  text-align: center;
+  
+}
+
+.ride-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 30px;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+    /* background-color: rgb(0, 0, 255, .4); */
+
 }
 
 .main-image {
   object-fit: cover;
   height: 40vh;
   width: 26vw;
+  border-radius: 5%;
   /* max-height: 90%;
   max-width: 90%; */
-  border-radius: 5%;
 }
+
 .main-image:hover {
   display: absolute;
   box-shadow: 2px 2px 5px 5px black;
@@ -49,26 +69,15 @@ button {
   width: 28vw;
 }
 
-a {
+/* a {
   text-decoration: none;
-}
+} */
+
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-
-.ride-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  font-size: 30px;
-
-  color: white;
-  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
-    -1px -1px 0 #000;
+  margin-top: 100px;
 }
 
 .edit-button {
@@ -76,6 +85,7 @@ a {
   flex-direction: column;
   justify-content: end;
 }
+
 button {
   height: 30px;
   width: 38px;
@@ -83,6 +93,7 @@ button {
   border: none;
   color: rgb(25, 25, 86);
 }
+
 button:hover {
   height: 30px;
   width: 38px;
@@ -99,6 +110,12 @@ button:hover {
   justify-content: center;
   padding: 5px;
   margin: 5px;
+}
+
+.buttoncontainer {
+  display: flex;
+  margin-top: 8px;
+  
 }
 
 .reviewImg {

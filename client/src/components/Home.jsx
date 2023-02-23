@@ -54,14 +54,20 @@ const Home = () => {
               getRides={getRides}
               getReviews={getReviews}
             />
-            <Link to={`updateRides/${ride._id}`}>
-              <button>
-                <span class="material-symbols-outlined">edit</span>
-              </button>
-            </Link>
-            <button onClick={() => handleDelete(ride._id)}>
-              <span class="material-symbols-outlined">delete</span>
-            </button>
+            <div className='buttoncontainer'>
+              <div className='editbut'>
+                <Link to={`updateRides/${ride._id}`}>
+                  <button>
+                    <span class="material-symbols-outlined">edit</span>
+                  </button>
+                </Link>
+              </div>
+              <div className='deletebut'>
+                <button onClick={() => handleDelete(ride._id)}>
+                  <span class="material-symbols-outlined">delete</span>
+                </button>
+              </div>
+            </div>
           </div>
         ))}
       </div>
