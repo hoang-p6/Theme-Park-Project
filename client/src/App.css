@@ -1,16 +1,15 @@
 .rides {
   display: grid;
   row-gap: 25px;
-  grid-template-columns: 33vw 33vw 33vw;
+  grid-template-columns: 33.5vw 33.5vw 33.5vw;
   text-align: center;
   /* border: 2px solid black; */
 }
 .ride-info {
-  margin: 10px;
-  border: 2px solid black;
-  padding: 20px;
-  text-decoration: none;
-  height: 60vh;
+  display: grid;
+  row-gap: 25px;
+  grid-template-columns: 33.5vw 33.5vw 33.5vw;
+  text-align: center;
 }
 .navbar {
   height: 10vh;
@@ -22,7 +21,20 @@ button {
 }
 img {
   border-radius: 25px;
-  width: 20vw;
-  height: 30vh;
+  width: 33.2vw;
+  height: 60vh;
   object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.ride-info {
+  position: absolute;
+  color: white;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+  font-size: 60px;
 }

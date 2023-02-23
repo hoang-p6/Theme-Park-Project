@@ -9,10 +9,11 @@ const RideDetails = ({ rides, reviews, getReviews, getRides }) => {
   const selectRide = () => {
     setThisRide(rides.find((ride) => ride._id === `${id}`))
   }
-  console.log(thisRide)
+
   useEffect(() => {
     selectRide()
   })
+
   const rideReviews = thisRide?.reviews?.map((review) => {
     const handleDelete = async () => {
       await axios.delete(
@@ -21,7 +22,7 @@ const RideDetails = ({ rides, reviews, getReviews, getRides }) => {
       getRides()
     }
     return (
-      <div>
+      <div key={review._id}>
         <div>
           <p>{review.reviewName}</p>
           <p>Ride Rating: {review.rating}</p>
@@ -31,12 +32,13 @@ const RideDetails = ({ rides, reviews, getReviews, getRides }) => {
       </div>
     )
   })
+
   return (
     <div>
       {thisRide && (
         <div>
+          <img src={thisRide.image}></img>
           <h1>{thisRide.name}</h1>
-          <img src={thisRide.image} />
           <h3>Location: {thisRide.location}</h3>
           <h2>Ride Reviews</h2>
           {rideReviews}
@@ -48,6 +50,7 @@ const RideDetails = ({ rides, reviews, getReviews, getRides }) => {
         id={id}
         getRides={getRides}
       />
+      ß{' '}
     </div>
   )
 }
