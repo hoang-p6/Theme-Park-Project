@@ -54,13 +54,17 @@ const AddRide = (props) => {
           value={formState.location}
         />
         <label htmlFor="location">Description of the Ride</label>
-        <input
+        <textarea
           type="text"
           id="description"
+          cols="30"
+          rows="8"
           onChange={handleChange}
           value={formState.description}
         />
-        <label htmlFor="location">Height Requirement of the Ride</label>
+        <label htmlFor="heightRequirement">
+          Height Requirement of the Ride
+        </label>
         <input
           type="text"
           id="heightRequirement"
@@ -74,7 +78,7 @@ const AddRide = (props) => {
           onChange={handleChange}
           value={formState.topSpeed}
         />
-        <button className="submit" type="submit">
+        <button className="submit-button" type="submit">
           Submit
         </button>
       </form>
