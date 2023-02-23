@@ -38,14 +38,14 @@ const RideDetails = ({ rides, reviews, getReviews, getRides }) => {
       {thisRide && (
         <div className='rideDetailsContainer'>
           <img className='reviewImg' src={thisRide.image}></img>
-          <div className='descriptionContainer'>
             <h1 className='reviewTitle'>{thisRide.name}</h1>
-            <h3>Location: {thisRide.location}</h3>
-            <h3>topSpeed: {thisRide.topSpeed}</h3>
-            <h3>heightRequirement: {thisRide.heightRequirement} </h3>
+          <div className='descriptionContainer'>
+            <h3 className='reviewLocation'>Location: {thisRide.location}</h3>
+            <h3 className='reviewTopSpeed'>Top Speed: {thisRide.topSpeed}</h3>
+            <h3 className='reviewHeightRequirement'>Height Requirement: {thisRide.heightRequirement} </h3>
+          </div>
             <h2>Ride Reviews</h2>
             {rideReviews}
-          </div>
         </div>
       )}
       <div className='rideReviewsContainer'>
