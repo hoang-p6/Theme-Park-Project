@@ -34,28 +34,28 @@ const RideDetails = ({ rides, reviews, getReviews, getRides }) => {
   })
 
   return (
-    <div>
+    <div className='reviewPageContainer'>
       {thisRide && (
-        <div>
-          <img src={thisRide.image}></img>
-          <h1>{thisRide.name}</h1>
-          <h3>Location: {thisRide.location}</h3>
-          <h3>topSpeed: {thisRide.topSpeed}</h3>
-          <h3>heightRequirement: {thisRide.heightRequirement} </h3>
-          <h2>Ride Reviews</h2>
-          {rideReviews}
+        <div className='rideDetailsContainer'>
+          <img className='reviewImg' src={thisRide.image}></img>
+          <div className='descriptionContainer'>
+            <h1 className='reviewTitle'>{thisRide.name}</h1>
+            <h3>Location: {thisRide.location}</h3>
+            <h3>topSpeed: {thisRide.topSpeed}</h3>
+            <h3>heightRequirement: {thisRide.heightRequirement} </h3>
+            <h2>Ride Reviews</h2>
+            {rideReviews}
+          </div>
         </div>
       )}
+      <div className='rideReviewsContainer'>
       <Reviews
         reviews={reviews}
         getReviews={getReviews}
         id={id}
         getRides={getRides}
-
-
-      />
-
-
+        />
+        </div>
     </div>
   )
 }

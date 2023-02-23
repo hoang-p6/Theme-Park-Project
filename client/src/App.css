@@ -10,8 +10,24 @@
 }
 
 .navbar {
-  height: 10vh;
+  height: 8vh;
+  width: 100%;
   background-color: rgb(138, 187, 255);
+  position: fixed;
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+  float: left;
+  padding: 10px;
+  font-size:x-large;
+}
+li a:hover {
+  color:#eee021;
+  background-color:#2377de;
+  border-radius: 30px;
+  transition:  all 0.7s ease-in;
 }
 button {
   width: 5vw;
@@ -42,12 +58,14 @@ a {
   align-items: center;
 }
 
+
 .ride-title {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
   font-size: 30px;
+
   color: white;
   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
     -1px -1px 0 #000;
@@ -81,4 +99,34 @@ button:hover {
   justify-content: center;
   padding: 5px;
   margin: 5px;
+}
+
+.reviewImg {
+  width: 90vw;
+  height: 50vh;
+  margin-top: 2vh;
+}
+
+.reviewTitle {
+
+}
+
+.reviewPageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.riderDetailsContainer {
+  
+}
+
+.descriptionContainer {
+
+}
+
+.rideReviewsContainer {
+
 }

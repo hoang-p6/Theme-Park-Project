@@ -4,8 +4,10 @@ const Nav = () => {
   return (
     <nav className="navbar">
       <header>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
+        <ul>
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/about">About</NavLink></li>
+        </ul>
       </header>
     </nav>
   )
