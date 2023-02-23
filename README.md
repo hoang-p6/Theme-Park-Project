@@ -14,9 +14,9 @@ A full stack website using MongoDB, Express, React, and Node, written using Java
 
 ## **_Screenshots_**
 
-[Imgur](https://i.imgur.com/JMhHRVo.png)
-[Imgur](https://i.imgur.com/OwzlCSC.png)
-[Imgur](https://i.imgur.com/Gb5LBnw.png)
+[Imgur]!(https://i.imgur.com/JMhHRVo.png)
+[Imgur]!(https://i.imgur.com/OwzlCSC.png)
+[Imgur]!(https://i.imgur.com/Gb5LBnw.png)
 
 # **_Updates_**
 
