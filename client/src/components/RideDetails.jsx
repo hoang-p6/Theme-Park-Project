@@ -21,8 +21,8 @@ const RideDetails = ({ rides, reviews, getReviews, getRides }) => {
       getRides()
     }
     return (
+      <div key={review._id}>
 
-      <div>
       <div>
         <p>{review.reviewName}</p>
         <p>Ride Rating: {review.rating}</p>
