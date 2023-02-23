@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import Reviews from './Reviews'
 
-
 const RideDetails = ({ rides, reviews, getReviews, getRides }) => {
   const { id } = useParams()
   const [thisRide, setThisRide] = useState(rides)
@@ -17,7 +16,9 @@ const RideDetails = ({ rides, reviews, getReviews, getRides }) => {
 
   const rideReviews = thisRide?.reviews?.map((review) => {
     const handleDelete = async () => {
-      await axios.delete(`http://localhost:3001/api/deleteReviews/${review._id}`)
+      await axios.delete(
+        `http://localhost:3001/api/deleteReviews/${review._id}`
+      )
       getRides()
     }
     return (
@@ -32,15 +33,12 @@ const RideDetails = ({ rides, reviews, getReviews, getRides }) => {
     )
   })
 
-
-
   return (
     <div>
       {thisRide && (
         <div>
+          <img src={thisRide.image}></img>
           <h1>{thisRide.name}</h1>
-          <img src={thisRide.image} />
-          <h4>Description: {thisRide.description}</h4>
           <h3>Location: {thisRide.location}</h3>
           <h3>topSpeed: {thisRide.topSpeed}</h3>
           <h3>heightRequirement: {thisRide.heightRequirement} </h3>
@@ -54,7 +52,9 @@ const RideDetails = ({ rides, reviews, getReviews, getRides }) => {
         id={id}
         getRides={getRides}
 
+
       />
+
 
     </div>
   )
