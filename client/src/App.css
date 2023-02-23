@@ -12,8 +12,24 @@
   text-align: center;
 }
 .navbar {
-  height: 10vh;
+  height: 8vh;
+  width: 100%;
   background-color: rgb(138, 187, 255);
+  position: fixed;
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+  float: left;
+  padding: 10px;
+  font-size:x-large;
+}
+li a:hover {
+  color:#eee021;
+  background-color:#2377de;
+  border-radius: 30px;
+  transition:  all 0.7s ease-in;
 }
 button {
   width: 5vw;
@@ -32,7 +48,7 @@ a {
 }
 
 .ride-info {
-  position: absolute;
+  /* position: absolute; */
   color: white;
   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
     -1px -1px 0 #000;
