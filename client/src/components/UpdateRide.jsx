@@ -13,7 +13,7 @@ const UpdateRide = ({ rides, getRides }) => {
   })
   const findRide = () => {
     setFormState(foundRide[0])
-    console.log(formState)
+
   }
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
@@ -23,7 +23,10 @@ const UpdateRide = ({ rides, getRides }) => {
     let updatedRide = {
       name: formState.name,
       image: formState.image,
-      location: formState.location
+      location: formState.location,
+      description: formState.description,
+      heightRequirement: formState.heightRequirement,
+      topSpeed: formState.topSpeed
     }
     await axios.put(`http://localhost:3001/api/updateRides/${id}`, updatedRide)
     foundRide[0] = updatedRide
@@ -60,6 +63,27 @@ const UpdateRide = ({ rides, getRides }) => {
               onChange={handleChange}
               value={formState.location}
             ></input>
+            <label htmlFor="location">Description:</label>
+            <input
+              id="description"
+              type="text"
+              onChange={handleChange}
+              value={formState.description}
+            />
+            <label htmlFor="location">Height Requirement:</label>
+            <input
+              id="heightRequirement"
+              type="text"
+              onChange={handleChange}
+              value={formState.heightRequirement}
+            />
+            <label htmlFor="location">Top Speed:</label>
+            <input
+              id="topSpeed"
+              type="text"
+              onChange={handleChange}
+              value={formState.topSpeed}
+            />
             <button type="submit">Save</button>
           </form>
         )}

@@ -22,13 +22,12 @@ const RideDetails = ({ rides, reviews, getReviews, getRides }) => {
     }
     return (
       <div key={review._id}>
-
-      <div>
-        <p>{review.reviewName}</p>
-        <p>Ride Rating: {review.rating}</p>
-        <p>Additional Comments: {review.comments}</p>
-      <button onClick={()=>handleDelete(review._id)}>Delete</button>
-      </div>
+        <div>
+          <p>{review.reviewName}</p>
+          <p>Ride Rating: {review.rating}</p>
+          <p>Additional Comments: {review.comments}</p>
+          <button onClick={() => handleDelete(review._id)}>Delete</button>
+        </div>
       </div>
     )
   })
@@ -41,7 +40,10 @@ const RideDetails = ({ rides, reviews, getReviews, getRides }) => {
         <div>
           <h1>{thisRide.name}</h1>
           <img src={thisRide.image} />
+          <h4>Description: {thisRide.description}</h4>
           <h3>Location: {thisRide.location}</h3>
+          <h3>topSpeed: {thisRide.topSpeed}</h3>
+          <h3>heightRequirement: {thisRide.heightRequirement} </h3>
           <h2>Ride Reviews</h2>
           {rideReviews}
         </div>
@@ -51,9 +53,9 @@ const RideDetails = ({ rides, reviews, getReviews, getRides }) => {
         getReviews={getReviews}
         id={id}
         getRides={getRides}
-        
+
       />
-      
+
     </div>
   )
 }
