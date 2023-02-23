@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import axios from 'axios'
 import Reviews from './Reviews'
 
 const RideDetails = ({ rides, reviews, getReviews, getRides }) => {
@@ -13,12 +14,20 @@ const RideDetails = ({ rides, reviews, getReviews, getRides }) => {
     selectRide()
   })
   const rideReviews = thisRide?.reviews?.map((review) => {
+    const handleDelete = async () => {
+      await axios.delete(
+        `http://localhost:3001/api/deleteReviews/${review._id}`
+      )
+      getRides()
+    }
     return (
       <div>
-        <p>{review.reviewName}</p>
-        <p>Ride Rating: {review.rating}</p>
-        <p>Additional Comments: {review.comments}</p>
-        {console.log(review._id)}
+        <div>
+          <p>{review.reviewName}</p>
+          <p>Ride Rating: {review.rating}</p>
+          <p>Additional Comments: {review.comments}</p>
+          <button onClick={() => handleDelete(review._id)}>Delete</button>
+        </div>
       </div>
     )
   })

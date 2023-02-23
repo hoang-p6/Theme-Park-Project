@@ -2,7 +2,12 @@ import { useState } from 'react'
 import axios from 'axios'
 
 const Reviews = ({ reviews, getReviews, id, getRides }) => {
-  const initialState = ''
+  const initialState = {
+    reviewName: '',
+    rating: "1",
+    comments: ''
+
+  }
   const [formState, setFormState] = useState(initialState)
 
   const handleChange = (e) => {
