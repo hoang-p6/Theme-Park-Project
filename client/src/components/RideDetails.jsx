@@ -9,7 +9,6 @@ const RideDetails = ({ rides, reviews, getReviews, getRides }) => {
   const selectRide = () => {
     setThisRide(rides.find((ride) => ride._id === `${id}`))
   }
-  console.log(thisRide)
   useEffect(() => {
     selectRide()
   })
@@ -19,7 +18,7 @@ const RideDetails = ({ rides, reviews, getReviews, getRides }) => {
       getRides()
     }
     return (
-      <div>
+      <div key={review._id}>
       <div>
         <p>{review.reviewName}</p>
         <p>Ride Rating: {review.rating}</p>
