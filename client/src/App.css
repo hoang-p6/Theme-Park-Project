@@ -1,4 +1,3 @@
-
 .home {
   display: grid;
   grid-template-columns: 30% 30% 30%;
@@ -21,6 +20,10 @@
   margin: 0;
   padding: 0;
   top: 0;
+  z-index: 5;
+}
+.navbar--scrolled {
+  background-color: grey;
 }
 .navlinks {
   font-family: 'Josefin Sans', sans-serif;
@@ -31,8 +34,7 @@ li {
   list-style-type: none;
   float: left;
   padding: 10px;
-  font-size:x-large;
-
+  font-size: x-large;
 }
 
 li a:hover {
@@ -47,13 +49,11 @@ li a:hover {
   grid-template-columns: 30% 30% 30%;
   text-align: center;
   margin: 0px 0px 10px 100px;
-  /* background-color: green; */
 }
 
 .containerForImageandText {
   position: relative;
   text-align: center;
-  
 }
 
 .ride-title {
@@ -65,8 +65,7 @@ li a:hover {
   color: white;
   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
     -1px -1px 0 #000;
-    /* background-color: rgb(0, 0, 255, .4); */
-
+  /* background-color: rgb(0, 0, 255, .4); */
 }
 
 .main-image {
@@ -77,7 +76,6 @@ li a:hover {
 
   /* max-height: 90%;
   max-width: 90%; */
-
 }
 
 .main-image:hover {
@@ -87,12 +85,18 @@ li a:hover {
   width: 28vw;
 }
 
-/* a {
+.navbar a {
   text-decoration: none;
-} */
+  color: white;
+  font-size: 80px;
+}
 
 .add-ride {
   border: 2px solid black;
+  height: 30px;
+  width: 100px;
+}
+.add-ride:hover {
   height: 30px;
   width: 100px;
 }
@@ -171,19 +175,21 @@ button:hover {
 .buttoncontainer {
   display: flex;
   margin-top: 8px;
-  
 }
 
 .reviewImg {
-  width: 90vw;
-  height: 50vh;
+  width: 60vw;
+  height: 60vh;
   margin-top: 2vh;
+  object-fit: fit;
+  box-shadow: 2px 2px 5px 5px black;
 }
 
 .reviewTitle {
 }
 
 .reviewPageContainer {
+  margin: 15vh 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,20 +198,24 @@ button:hover {
 }
 
 .riderDetailsContainer {
+  border: 3px solid black;
 }
 
 .descriptionContainer {
+  border: 3px solid black;
 }
 
-.rideReviewsContainer {
+.descriptionContainer {
+  border: 3px solid black;
 }
 .about {
-  padding-top: 8vh
+  padding-top: 8vh;
 }
 .about h2 {
   padding-left: 5vw;
 }
-.about h4, big {
+.about h4,
+big {
   float: left;
   width: 50%;
   padding-left: 5vw;
@@ -227,5 +237,5 @@ footer {
 
 footer img {
   height: 10vh;
-  width: 10vw; 
+  width: 10vw;
 }

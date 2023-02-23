@@ -4,9 +4,8 @@ import axios from 'axios'
 const Reviews = ({ reviews, getReviews, id, getRides }) => {
   const initialState = {
     reviewName: '',
-    rating: "1",
+    rating: '1',
     comments: ''
-
   }
   const [formState, setFormState] = useState(initialState)
 
@@ -26,7 +25,7 @@ const Reviews = ({ reviews, getReviews, id, getRides }) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className="reviews">
+      <form onSubmit={handleSubmit} className="review-form">
         <h3>Add a Review</h3>
         <label htmlFor="reviewName">Name:</label>
         <input
@@ -37,16 +36,13 @@ const Reviews = ({ reviews, getReviews, id, getRides }) => {
         ></input>
 
         <label htmlFor="rating">Rating:</label>
-        <select
-          id="rating"
-          onChange={handleChange}
-          value={formState.rating}>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
+        <select id="rating" onChange={handleChange} value={formState.rating}>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
         <label htmlFor="comments">Comments:</label>
         <input
           id="comments"
