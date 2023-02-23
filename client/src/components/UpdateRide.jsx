@@ -13,7 +13,6 @@ const UpdateRide = ({ rides, getRides }) => {
   })
   const findRide = () => {
     setFormState(foundRide[0])
-
   }
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
@@ -39,9 +38,9 @@ const UpdateRide = ({ rides, getRides }) => {
   }, [])
   return (
     <>
-      <div>
+      <div className="edit-form-container">
         {formState && (
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="edit-form">
             <label htmlFor="name">Name:</label>
             <input
               id="name"
@@ -64,9 +63,11 @@ const UpdateRide = ({ rides, getRides }) => {
               value={formState.location}
             ></input>
             <label htmlFor="location">Description:</label>
-            <input
+            <textarea
               id="description"
               type="text"
+              cols="30"
+              rows="8"
               onChange={handleChange}
               value={formState.description}
             />
@@ -84,7 +85,9 @@ const UpdateRide = ({ rides, getRides }) => {
               onChange={handleChange}
               value={formState.topSpeed}
             />
-            <button type="submit">Save</button>
+            <button type="submit" className="submit-button">
+              Save
+            </button>
           </form>
         )}
       </div>

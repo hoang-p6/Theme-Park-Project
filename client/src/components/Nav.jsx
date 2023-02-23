@@ -5,8 +5,12 @@ const Nav = () => {
     <nav className="navbar">
       <header>
         <ul>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
+          <li className="navlinks">
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li className="navlinks">
+            <NavLink to="/about">About</NavLink>
+          </li>
         </ul>
       </header>
     </nav>

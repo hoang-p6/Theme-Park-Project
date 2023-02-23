@@ -1,14 +1,30 @@
-html {
-  margin: 0;
+
+.home {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  text-align: center;
+  margin: 10px 0px 10px 100px;
+}
+
+.home-container {
+  margin: 15vh 0 0 0;
 }
 
 .navbar {
-  height: 8vh;
+  background-image: url('https://t4.ftcdn.net/jpg/03/35/87/53/360_F_335875354_DhqgQGzYbcGQzRltTIulubcwNqsi6RZ9.jpg');
+  background-position-y: 30vh;
+  height: 13vh;
   width: 100%;
+  position: absolute;
   background-color: rgb(138, 187, 255);
   position: fixed;
   margin: 0;
   padding: 0;
+  top: 0;
+}
+.navlinks {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 35px;
 }
 
 li {
@@ -20,10 +36,10 @@ li {
 }
 
 li a:hover {
-  color:#eee021;
-  background-color:#2377de;
-  border-radius: 30px;
-  transition:  all 0.7s ease-in;
+  color: #eee021;
+  background-color: #2377de;
+  border-radius: 10px;
+  transition: all 0.7s ease-in;
 }
 
 .home {
@@ -58,8 +74,10 @@ li a:hover {
   height: 40vh;
   width: 26vw;
   border-radius: 5%;
+
   /* max-height: 90%;
   max-width: 90%; */
+
 }
 
 .main-image:hover {
@@ -73,13 +91,36 @@ li a:hover {
   text-decoration: none;
 } */
 
+.add-ride {
+  border: 2px solid black;
+  height: 30px;
+  width: 100px;
+}
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ride-title {
+  font-family: 'Josefin Sans', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 100px;
 }
-
+.edit-form-container {
+  font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  margin: 20vh 0 0 0;
+}
+.edit-form {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .edit-button {
   display: flex;
   flex-direction: column;
@@ -87,6 +128,7 @@ li a:hover {
 }
 
 button {
+  font-family: 'Josefin Sans', sans-serif;
   height: 30px;
   width: 38px;
   background-color: white;
@@ -99,11 +141,25 @@ button:hover {
   width: 38px;
   background-color: rgb(25, 25, 86);
   color: white;
+  transition: all 0.2s ease-in;
+}
+.submit-button {
+  margin: 7px 0 0 0;
+  height: 30px;
+  width: 80px;
+}
+.submit-button:hover {
+  height: 30px;
+  width: 80px;
+  background-color: rgb(25, 25, 86);
+  color: white;
+  transition: all 0.2s ease-in;
 }
 .ride-form-container {
   background-color: rgb(138, 187, 255);
 }
 .ride-form {
+  font-family: 'Josefin Sans', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,7 +181,6 @@ button:hover {
 }
 
 .reviewTitle {
-
 }
 
 .reviewPageContainer {
@@ -137,13 +192,40 @@ button:hover {
 }
 
 .riderDetailsContainer {
-  
 }
 
 .descriptionContainer {
-
 }
 
 .rideReviewsContainer {
+}
+.about {
+  padding-top: 8vh
+}
+.about h2 {
+  padding-left: 5vw;
+}
+.about h4, big {
+  float: left;
+  width: 50%;
+  padding-left: 5vw;
+}
+.about-img {
+  height: 40vh;
+  width: 40vw;
+  border-radius: 5%;
+  float: right;
+  margin-top: 5vh;
+  margin-right: 5vw;
+}
+footer {
+  position: fixed;
+  background-color: rgb(138, 187, 255);
+  bottom: 0;
+  width: 100%;
+}
 
+footer img {
+  height: 10vh;
+  width: 10vw; 
 }
