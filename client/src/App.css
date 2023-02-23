@@ -5,29 +5,38 @@
   margin: 10px 0px 10px 100px;
 }
 
-.home {
-  position: center;
+.home-container {
+  margin: 15vh 0 0 0;
 }
 
 .navbar {
-  height: 8vh;
+  background-image: url('https://t4.ftcdn.net/jpg/03/35/87/53/360_F_335875354_DhqgQGzYbcGQzRltTIulubcwNqsi6RZ9.jpg');
+  background-position-y: 30vh;
+  height: 13vh;
   width: 100%;
+  position: absolute;
   background-color: rgb(138, 187, 255);
   position: fixed;
   margin: 0;
   padding: 0;
+  top: 0;
 }
+.navlinks {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 35px;
+}
+
 li {
   list-style-type: none;
   float: left;
   padding: 10px;
-  font-size:x-large;
+  font-size: x-large;
 }
 li a:hover {
-  color:#eee021;
-  background-color:#2377de;
-  border-radius: 30px;
-  transition:  all 0.7s ease-in;
+  color: #eee021;
+  background-color: #2377de;
+  border-radius: 10px;
+  transition: all 0.7s ease-in;
 }
 button {
   width: 5vw;
@@ -38,8 +47,6 @@ button {
   object-fit: cover;
   height: 40vh;
   width: 26vw;
-  /* max-height: 90%;
-  max-width: 90%; */
   border-radius: 5%;
 }
 .main-image:hover {
@@ -51,6 +58,12 @@ button {
 
 a {
   text-decoration: none;
+  color: white;
+}
+.add-ride {
+  border: 2px solid black;
+  height: 30px;
+  width: 100px;
 }
 .card {
   display: flex;
@@ -58,8 +71,8 @@ a {
   align-items: center;
 }
 
-
 .ride-title {
+  font-family: 'Josefin Sans', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,13 +83,25 @@ a {
   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
     -1px -1px 0 #000;
 }
-
+.edit-form-container {
+  font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  margin: 20vh 0 0 0;
+}
+.edit-form {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .edit-button {
   display: flex;
   flex-direction: column;
   justify-content: end;
 }
 button {
+  font-family: 'Josefin Sans', sans-serif;
   height: 30px;
   width: 38px;
   background-color: white;
@@ -88,11 +113,25 @@ button:hover {
   width: 38px;
   background-color: rgb(25, 25, 86);
   color: white;
+  transition: all 0.2s ease-in;
+}
+.submit-button {
+  margin: 7px 0 0 0;
+  height: 30px;
+  width: 80px;
+}
+.submit-button:hover {
+  height: 30px;
+  width: 80px;
+  background-color: rgb(25, 25, 86);
+  color: white;
+  transition: all 0.2s ease-in;
 }
 .ride-form-container {
   background-color: rgb(138, 187, 255);
 }
 .ride-form {
+  font-family: 'Josefin Sans', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -108,7 +147,6 @@ button:hover {
 }
 
 .reviewTitle {
-
 }
 
 .reviewPageContainer {
@@ -120,13 +158,10 @@ button:hover {
 }
 
 .riderDetailsContainer {
-  
 }
 
 .descriptionContainer {
-
 }
 
 .rideReviewsContainer {
-
 }

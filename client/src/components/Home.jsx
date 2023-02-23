@@ -39,7 +39,7 @@ const Home = () => {
   }
 
   return (
-    <div>
+    <div className="home-container">
       <div className="home">
         {rides.map((ride) => (
           <div key={ride._id} className="card">
