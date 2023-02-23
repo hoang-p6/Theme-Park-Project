@@ -1,17 +1,15 @@
 import { Link } from 'react-router-dom'
 const RideList = (props) => {
   return (
-    <Link to={`/getRide/${props.id}`}>
-      <div className="rides">
-        <img src={props.image} alt="ride"></img>
-        <div className="ride-info">
-          <h3 className="ride-title">{props.name}</h3>
-          <h5>{props.location}</h5>
-          <Link to={`updateRides/${props.id}`}>
-            <button>Edit</button>
-          </Link>
-        </div>
+    <Link to={`/getRide/${props.id}`} className="ridelist">
+      <div className="ride-title">
+        <h2>{props.name}</h2>
+        <h3>{props.location}</h3>
+        {/* <Link to={`updateRides/${props.id}`}>
+          <button>Edit</button>
+        </Link> */}
       </div>
+      <img src={props.image} alt="ride" className="main-image"></img>
     </Link>
   )
 }

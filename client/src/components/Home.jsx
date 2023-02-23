@@ -3,6 +3,7 @@ import AddRide from './AddRide'
 import RideList from './RideList'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const BASE_URL = `http://localhost:3001/api`
 
@@ -38,25 +39,35 @@ const Home = () => {
   }
 
   return (
-    <div className="rides">
-      {rides.map((ride) => (
-        <div key={ride._id}>
-          <RideList
-            name={ride.name}
-            image={ride.image}
-            location={ride.location}
-            description={ride.description}
-            heightRequirement={ride.heightRequirement}
-            topSpeed={ride.topSpeed}
-            id={ride._id}
-            getRides={getRides}
-            getReviews={getReviews}
-          />
-          <button onClick={() => handleDelete(ride._id)}>Delete</button>
-        </div>
-      ))}
-      <button onClick={addRide}>Add Ride</button>
-
+    <div>
+      <div className="home">
+        {rides.map((ride) => (
+          <div key={ride._id} className="card">
+            <RideList
+              name={ride.name}
+              image={ride.image}
+              location={ride.location}
+              description={ride.description}
+              heightRequirement={ride.heightRequirement}
+              topSpeed={ride.topSpeed}
+              id={ride._id}
+              getRides={getRides}
+              getReviews={getReviews}
+            />
+            <Link to={`updateRides/${ride._id}`}>
+              <button>
+                <span class="material-symbols-outlined">edit</span>
+              </button>
+            </Link>
+            <button onClick={() => handleDelete(ride._id)}>
+              <span class="material-symbols-outlined">delete</span>
+            </button>
+          </div>
+        ))}
+      </div>
+      <button onClick={addRide} className="add-ride">
+        Add Ride
+      </button>
       {addingRide && <AddRide getRides={getRides} />}
     </div>
   )

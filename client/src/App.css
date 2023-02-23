@@ -1,40 +1,84 @@
-.rides {
+.home {
   display: grid;
-  row-gap: 25px;
-  grid-template-columns: 33.5vw 33.5vw 33.5vw;
+  grid-template-columns: 30% 30% 30%;
   text-align: center;
-  /* border: 2px solid black; */
+  margin: 10px 0px 10px 100px;
 }
-.ride-info {
-  display: grid;
-  row-gap: 25px;
-  grid-template-columns: 33.5vw 33.5vw 33.5vw;
-  text-align: center;
+
+.home {
+  position: center;
 }
+
 .navbar {
   height: 10vh;
   background-color: rgb(138, 187, 255);
 }
 button {
   width: 5vw;
-  height: 5vh;
+  height: 2vh;
 }
-img {
-  border-radius: 25px;
-  width: 33.2vw;
-  height: 60vh;
+
+.main-image {
   object-fit: cover;
+  height: 40vh;
+  width: 26vw;
+  /* max-height: 90%;
+  max-width: 90%; */
+  border-radius: 5%;
+}
+.main-image:hover {
+  display: absolute;
+  box-shadow: 2px 2px 5px 5px black;
+  height: 42vh;
+  width: 28vw;
 }
 
 a {
   text-decoration: none;
-  color: black;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.ride-info {
+.ride-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
+  font-size: 30px;
   color: white;
   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
     -1px -1px 0 #000;
-  font-size: 60px;
+}
+
+.edit-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+button {
+  height: 30px;
+  width: 38px;
+  background-color: white;
+  border: none;
+  color: rgb(25, 25, 86);
+}
+button:hover {
+  height: 30px;
+  width: 38px;
+  background-color: rgb(25, 25, 86);
+  color: white;
+}
+.ride-form-container {
+  background-color: rgb(138, 187, 255);
+}
+.ride-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin: 5px;
 }
