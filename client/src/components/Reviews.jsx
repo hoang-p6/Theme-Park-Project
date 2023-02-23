@@ -2,7 +2,12 @@ import { useState } from 'react'
 import axios from 'axios'
 
 const Reviews = ({ reviews, getReviews, id, getRides }) => {
-  const initialState = ''
+  const initialState = {
+    reviewName: '',
+    rating: "1",
+    comments: ''
+
+  }
   const [formState, setFormState] = useState(initialState)
 
   const handleChange = (e) => {
@@ -22,7 +27,7 @@ const Reviews = ({ reviews, getReviews, id, getRides }) => {
   return (
     <div>
       <form onSubmit={handleSubmit} className="reviews">
-        <h1>Reviews</h1>
+        <h3>Add a Review</h3>
         <label htmlFor="reviewName">Name:</label>
         <input
           id="reviewName"
@@ -32,13 +37,16 @@ const Reviews = ({ reviews, getReviews, id, getRides }) => {
         ></input>
 
         <label htmlFor="rating">Rating:</label>
-        <input
+        <select
           id="rating"
-          type="text"
           onChange={handleChange}
-          value={formState.rating}
-        ></input>
-
+          value={formState.rating}>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
         <label htmlFor="comments">Comments:</label>
         <input
           id="comments"
@@ -46,7 +54,6 @@ const Reviews = ({ reviews, getReviews, id, getRides }) => {
           onChange={handleChange}
           value={formState.comments}
         ></input>
-
         <button type="submit">Add</button>
       </form>
     </div>
