@@ -27,6 +27,7 @@
 }
 .navlinks {
   font-family: 'Josefin Sans', sans-serif;
+  text-shadow: 3px 3px 8px black;
   font-size: 35px;
 }
 
@@ -38,10 +39,8 @@ li {
 }
 
 li a:hover {
-  color: #eee021;
-  background-color: #2377de;
   border-radius: 10px;
-  transition: all 0.7s ease-in;
+  text-shadow: 1.5px 1.5px 8px;
 }
 
 .home {
@@ -58,7 +57,7 @@ li a:hover {
 
 .ride-title {
   position: absolute;
-  top: 50%;
+  top: 25%;
   left: 50%;
   font-size: 30px;
   transform: translate(-50%, -50%);
@@ -108,10 +107,16 @@ li a:hover {
 
 .ride-title {
   font-family: 'Josefin Sans', sans-serif;
+  font-size: 35px;
+
+  text-shadow: 3px 3px 8px black;
+
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  text-align: center;
+  margin-top: 40px;
 }
 .edit-form-container {
   font-family: 'Josefin Sans', sans-serif;
@@ -160,7 +165,7 @@ button:hover {
   transition: all 0.2s ease-in;
 }
 .ride-form-container {
-  background-color: rgb(138, 187, 255);
+  background-image: url('https://t4.ftcdn.net/jpg/03/35/87/53/360_F_335875354_DhqgQGzYbcGQzRltTIulubcwNqsi6RZ9.jpg');
 }
 .ride-form {
   font-family: 'Josefin Sans', sans-serif;
@@ -178,11 +183,13 @@ button:hover {
 }
 
 .reviewImg {
-  width: 60vw;
-  height: 60vh;
+  margin: 2vh;
+  width: 40vw;
+  height: 40vh;
   margin-top: 2vh;
   object-fit: fit;
   box-shadow: 2px 2px 5px 5px black;
+  float: left;
 }
 
 .reviewTitle {
@@ -201,12 +208,13 @@ button:hover {
   border: 3px solid black;
 }
 
-.descriptionContainer {
+/* .descriptionContainer {
   border: 3px solid black;
-}
+} */
 
-.descriptionContainer {
-  border: 3px solid black;
+.descriptionContainer h3,
+h4 {
+  margin-left: 20%;
 }
 .about {
   padding-top: 8vh;
@@ -229,13 +237,20 @@ big {
   margin-right: 5vw;
 }
 footer {
+  background-image: url('https://t4.ftcdn.net/jpg/03/35/87/53/360_F_335875354_DhqgQGzYbcGQzRltTIulubcwNqsi6RZ9.jpg');
   position: fixed;
   background-color: rgb(138, 187, 255);
   bottom: 0;
   width: 100%;
+  height: 10vh;
 }
 
 footer img {
-  height: 10vh;
-  width: 10vw;
+  margin-top: 1.4vh;
+  height: 7vh;
+  width: 7vw;
+}
+h3 {
+  position: flex;
+  align-items: center;
 }
