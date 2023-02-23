@@ -16,6 +16,7 @@
   position: fixed;
   margin: 0;
   padding: 0;
+  top: 0;
 }
 li {
   list-style-type: none;
@@ -129,4 +130,34 @@ button:hover {
 
 .rideReviewsContainer {
 
+}
+.about {
+  padding-top: 8vh
+}
+.about h2 {
+  padding-left: 5vw;
+}
+.about h4, big {
+  float: left;
+  width: 50%;
+  padding-left: 5vw;
+}
+.about-img {
+  height: 40vh;
+  width: 40vw;
+  border-radius: 5%;
+  float: right;
+  margin-top: 5vh;
+  margin-right: 5vw;
+}
+footer {
+  position: fixed;
+  background-color: rgb(138, 187, 255);
+  bottom: 0;
+  width: 100%;
+}
+
+footer img {
+  height: 10vh;
+  width: 10vw; 
 }
