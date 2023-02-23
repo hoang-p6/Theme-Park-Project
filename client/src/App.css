@@ -2,11 +2,11 @@
   display: grid;
   grid-template-columns: 30% 30% 30%;
   text-align: center;
-  margin: 10px 0px 10px 100px;
 }
 
 .home-container {
   margin: 15vh 0 0 0;
+  margin-left: 3vw;
 }
 
 .navbar {
