@@ -34,7 +34,6 @@ const Reviews = ({ reviews, getReviews, id, getRides }) => {
           onChange={handleChange}
           value={formState.reviewName}
         ></input>
-
         <label htmlFor="rating">Rating:</label>
         <select id="rating" onChange={handleChange} value={formState.rating}>
           <option value="1">1</option>
